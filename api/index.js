@@ -28,6 +28,13 @@ const openaiApi = new OpenAI({
 
 
 app.post('/gpt', async (req, res) => {
+  if (req.method === 'OPTIONS') {
+    res.setHeader('Access-Control-Allow-Origin', 'https://email-responder-ai-app.vercel.app');
+    res.setHeader('Access-Control-Allow-Methods', 'POST');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    res.status(200).send();
+    return;
+  }
   try {
     const { message, mood, context, emailType, name, language } = req.body;
 
