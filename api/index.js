@@ -27,6 +27,7 @@ const openaiApi = new OpenAI({
 });
 
 
+
 app.post('/gpt', async (req, res) => {
   if (req.method === 'OPTIONS') {
     res.setHeader('Access-Control-Allow-Origin', 'https://email-responder-ai-app.vercel.app');
