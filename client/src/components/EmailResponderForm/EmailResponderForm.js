@@ -15,7 +15,7 @@ function EmailResponderForm() {
     // Clear any previous responses
     setResponse('');
   
-    const baseURL = "https://email-responder-6s48qltde-vin-17.vercel.app";
+    const baseURL = "https://email-responder-ai-azure.vercel.app";
     const devURL = "http://127.0.0.1:4000";
   
     try {
