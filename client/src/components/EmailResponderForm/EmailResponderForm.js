@@ -15,11 +15,12 @@ function EmailResponderForm() {
     // Clear any previous responses
     setResponse('');
   
-    
+    const baseURL = "https://email-responder-f3v4sg467-vin-17.vercel.app/";
+    const devURL = "http://127.0.0.1:4000";
   
     try {
       // Send a POST request to the /gpt endpoint of our Express server
-      const apiResponse = await fetch('http://127.0.0.1:4000/gpt', {
+      const apiResponse = await fetch(`${baseURL}/gpt`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
